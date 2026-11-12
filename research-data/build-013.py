@@ -86,6 +86,16 @@ if not test_ledger.exists():
             "去重订单组", "原始记录位置", "客户信息已脱敏", "记录人", "复核人",
         ])
 
+seller_ledger = RESEARCH / "卖家商品观测.csv"
+if not seller_ledger.exists():
+    with seller_ledger.open("w", encoding="utf-8-sig", newline="") as handle:
+        csv.writer(handle).writerow([
+            "类目ID", "商品ID", "平台", "卖家去重ID", "商品页URL", "目标付款人", "交付规格",
+            "标价", "标价单位", "平台显示近30天销量", "平台显示近90天销量", "累计销量",
+            "上架日期", "观察日期", "原页截图位置", "来源等级", "销量口径限制",
+            "是否同一订单组", "核查人", "复核人",
+        ])
+
 records = []
 with ledger.open(encoding="utf-8-sig", newline="") as handle:
     for row in csv.DictReader(handle):

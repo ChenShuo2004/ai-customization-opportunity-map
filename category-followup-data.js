@@ -1,0 +1,34 @@
+// Original public posts checked on 2026-11-12. These are qualitative clues,
+// not verified SKU orders or inputs to the formal eight-dimension scores.
+window.CATEGORY_FOLLOWUP={
+  checkedAt:'2026-11-12',
+  sources:[
+    {
+      '证据ID':'F013-01',
+      '关联细分类目':'婚礼筹备',
+      '证据类型':'小红书原生卖家帖与评论样本',
+      '可确认的内容':'AI婚纱照商家公开接单；读取到的前10条评论均在问价。',
+      '明确限制':'评论区显示154条评论，但仅核对前10条；问价不等于符合Q定义的有效咨询、接受报价或付款，不能推算成交率。',
+      '来源URL':'https://www.xiaohongshu.com/search_result/6ac9e000000000001a033c0b?xsec_token=AB26zb73PMYT27QVf-bgAotyprJWXl5g4ZzqIqUQUuyj0=&xsec_source=',
+      '原帖时间':'2026-10-10'
+    },
+    {
+      '证据ID':'F013-02',
+      '关联细分类目':'宠物影像',
+      '证据类型':'小红书卖家自述',
+      '可确认的内容':'发布者称曾为狗友群成员定制宠物写真并获得少量收入。',
+      '明确限制':'2025年的自述，无付款凭证、具体金额或近90天订单；宠物写真也不能直接等同于拟人写真SKU。',
+      '来源URL':'https://www.xiaohongshu.com/search_result/67ccfaf5000000000b016024?xsec_token=AB-JrgLzkbsZ9TOILtMq6voNx2tmURntWJiChkoFy_wyE=&xsec_source=',
+      '原帖时间':'2025-03-09'
+    },
+    {
+      '证据ID':'F013-03',
+      '关联细分类目':'商品图片',
+      '证据类型':'小红书潜在买家原帖/免费工具替代',
+      '可确认的内容':'自称拼多多运营者公开寻找可免费生成商品主图和详情页的AI工具。',
+      '明确限制':'证明制作任务和免费工具偏好，不证明愿意购买人工代做，也不能代表整个商家市场。',
+      '来源URL':'https://www.xiaohongshu.com/search_result/6aa6aad3000000002b0134c2?xsec_token=ABGfjrFMt_ScZN-emKhkDoGDpYJg_XVsERag2_vxHeiLU=&xsec_source=',
+      '原帖时间':'2026-09-13'
+    }
+  ]
+};

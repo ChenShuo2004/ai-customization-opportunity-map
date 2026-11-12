@@ -45,7 +45,7 @@ function categoryPosition(categoryId,xMetric,yMetric){
   return y+x;
 }
 function categorySources(c){
-  return category013.sources.filter(s=>(s['关联细分类目']||'').split('/').includes(c['细分类目']));
+  return [...category013.sources,...(window.CATEGORY_FOLLOWUP?.sources||[])].filter(s=>(s['关联细分类目']||'').split('/').includes(c['细分类目']));
 }
 function openCategoryProfile(c){
   if(!c)return;
@@ -56,7 +56,7 @@ function openCategoryProfile(c){
     const row=scores[name];
     return `<div class="category-metric"><span>${esc(name)}</span><strong>${row?esc(row['评分0到5'])+' / 5':'待核实'}</strong><small>${esc(meaning)}</small>${row?`<a href="${esc(row['来源URL'])}" target="_blank" rel="noopener">原始证据 ↗</a>`:''}</div>`;
   }).join('');
-  const sourceCards=sources.map(s=>`<div class="category-source"><span>${esc(s['证据ID'])} · ${esc(s['证据类型'])}</span><a href="${esc(s['来源URL'])}" target="_blank" rel="noopener">${esc(s['可确认的内容'])} ↗</a><small>限制：${esc(s['明确限制'])}</small></div>`).join('');
+  const sourceCards=sources.map(s=>`<div class="category-source"><span>${esc(s['证据ID'])} · ${esc(s['证据类型'])}${s['原帖时间']||s['公开时间']?' · '+esc(s['原帖时间']||s['公开时间']):''}</span><a href="${esc(s['来源URL'])}" target="_blank" rel="noopener">${esc(s['可确认的内容'])} ↗</a><small>限制：${esc(s['明确限制'])}</small></div>`).join('');
   const childCards=children.map(x=>{
     const r=screening012.products[x.id];
     return `<button class="category-child" data-product-id="${esc(x.id)}"><strong>${esc(x.name)}</strong><span>${esc(r?.eligibility||'待核')} · ${esc(r?.buyer||'买家待拆')}</span></button>`;
@@ -64,7 +64,7 @@ function openCategoryProfile(c){
   detail(`013 · ${c['中类ID']} · ${c['调研顺序']}`,c['细分类目'],
     `<div class="category-profile-lead"><strong>${esc(c['具体项目数'])} 项具体商品 · ${esc(c['C轻B初筛适配'])} 项符合012规则初筛</strong><span>${esc(c['调研理由'])}</span><small>资格数量是商品初筛，不是类目成交或市场份额。</small></div>`+
     `<div class="category-profile-heading"><strong>八项经营指标</strong><span>${Object.keys(scores).length} / 8 已核实</span></div><div class="category-metrics">${metricCards}</div>`+
-    `<div class="category-profile-heading"><strong>013 公开线索</strong><span>${sources.length} 条 · 不计作订单</span></div>${sourceCards||'<p class="category-empty">本批没有能直接关联这个类目的新来源；旧商品来源可在项目详情查看。</p>'}`+
+    `<div class="category-profile-heading"><strong>公开线索与反证</strong><span>${sources.length} 条 · 不计作订单</span></div>${sourceCards||'<p class="category-empty">本批没有能直接关联这个类目的新来源；旧商品来源可在项目详情查看。</p>'}`+
     `<div class="category-profile-heading"><strong>商品组合</strong><span>点击直接看项目</span></div><div class="category-children">${childCards}</div>`);
   $('#detail-layer').classList.add('is-category');
   document.querySelectorAll('.category-child').forEach(b=>b.onclick=()=>{
