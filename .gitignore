@@ -2,6 +2,7 @@
 .DS_Store
 /research-data/*
 !/research-data/视频案例.pdf
+!/research-data/build-013.py
 preview.png
 catalog.json
 video-cases.json
