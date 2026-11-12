@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RESEARCH = ROOT / "research-data"
 ZIP = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(
-    "/Users/lucxixi/Downloads/AIGC_交付Codex_013_市场类目优先_20_101_569全量评估.zip"
+    Path.home() / "Downloads" / "AIGC_交付Codex_013_市场类目优先_20_101_569全量评估.zip"
 )
 
 
