@@ -1,1 +1,11 @@
-AI customization opportunity map
+# AI 定制机会地图
+
+中国大陆 AI 媒体定制项目的交互式研究网页。当前收录 569 个候选项目；D/A 四象限是 V0 经营假设，正式 D/A/E/L 尚未评分。Q3、Q4 并非淘汰名单。
+
+## 本地查看
+
+在本目录运行 `python3 -m http.server 8765`，打开 `http://localhost:8765`。网页为静态 HTML、CSS、JavaScript，无构建步骤。
+
+## 数据边界
+
+`catalog-data.js` 是商品目录，`quadrant-data.js` 是 V0 判断假设，`research-data.js` 和 `batch-008-data.js` 是网页使用的证据索引。挂牌、报价和受访叙事不等于团队成交；请在网页逐项查看来源与限制。
