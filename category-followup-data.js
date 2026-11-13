@@ -29,6 +29,24 @@ window.CATEGORY_FOLLOWUP={
       '明确限制':'证明制作任务和免费工具偏好，不证明愿意购买人工代做，也不能代表整个商家市场。',
       '来源URL':'https://www.xiaohongshu.com/search_result/6aa6aad3000000002b0134c2?xsec_token=ABGfjrFMt_ScZN-emKhkDoGDpYJg_XVsERag2_vxHeiLU=&xsec_source=',
       '原帖时间':'2026-09-13'
+    },
+    {
+      '证据ID':'F013-04',
+      '关联细分类目':'恋爱与求婚/婚礼现场/生日与人生节点',
+      '证据类型':'小红书原生卖家报价帖',
+      '可确认的内容':'卖家公开提供求婚纪念、婚礼开场、生日祝福等定制视频，标价300元起。',
+      '明确限制':'一条跨品报价帖同时关联三个研究类目，但不是三笔订单；原帖显示0评论，未见买方询价、接受报价或付款。',
+      '来源URL':'https://www.xiaohongshu.com/search_result/6af409ed0000000023013a73?xsec_token=ABLZTNcQaNYof1CkIXXHCamdCu7cLXe1jBrAFZi7Z6waM=&xsec_source=',
+      '原帖时间':'2026-11-11'
+    },
+    {
+      '证据ID':'F013-05',
+      '关联细分类目':'电商商品视频',
+      '证据类型':'小红书原生有偿招募帖／客户边界',
+      '可确认的内容':'发帖者称有大量电商图片订单，公开有偿寻找长期合作的AI视频师。',
+      '明确限制':'买方更像有订单的中间服务方，未证明其为直接付款的小店老板；没有视频SKU规格、报价、成交或付款凭证。153条评论不能算有效咨询。',
+      '来源URL':'https://www.xiaohongshu.com/search_result/6ac1f8b6000000001a020a84?xsec_token=ABLrI0BT7HPftBjReYvRgW2rdKFam2KwnI3rYIciT5HDA=&xsec_source=',
+      '原帖时间':'2026-10-04'
     }
   ]
 };
